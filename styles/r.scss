@@ -1,0 +1,380 @@
+@import './mixins.less';
+
+// 元子类
+
+.r-flex-between{
+  .flex-between();
+}
+
+.r-flex-center{
+  .flex-center();
+  .flex-item{
+    flex: 1;
+  }
+}
+// 占满剩余部分
+.r-flex-item-content{
+  flex: 1;
+  line-height: 1.2em;
+  padding-right: 5px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  white-space: normal;
+}
+// 顶部对齐
+.r-flex-y-start{
+  display: flex;
+  align-items: flex-start;
+}
+// 居中对齐
+.r-flex-y-center{
+  display: flex;
+  align-items: center;
+}
+
+.r-link{
+  color: $color-link;
+  cursor: pointer;
+  &:hover{
+    text-decoration: underline
+  }
+}
+.r-link-primary{
+  color: $color-primary;
+  cursor: pointer;
+  &:hover{
+    text-decoration: underline
+  }
+}
+
+.r-disabled{
+  color: $color-text-placeholder !important;
+}
+
+.r-text-title{
+  font-size: 18px;
+  color: $color-title;
+}
+.r-text-description{
+  font-size: 12px;
+  line-height: 1.4em;
+  color: $color-text-description;
+}
+.r-text-description-color{
+  color: $color-text-description;
+}
+.r-text-warning{
+  font-size: 12px;
+  line-height: 1.4em;
+  color: $color-warning;
+}
+.r-text-danger{
+  font-size: 12px;
+  line-height: 1.4em;
+  color: $color-danger;
+}
+.r-text-hover:hover{
+  color: $color-primary;
+  cursor: pointer;
+}
+.r-bg-hover:hover{
+  background-color: $bg-color-active;
+  .el-loading-mask{
+    background-color: $bg-color-active;
+  }
+}
+
+.r-display-none{
+  display: none !important;
+}
+.r-display-hover-show{
+  display: none;
+  &:hover{
+    display: inherit;
+  }
+}
+
+.r-border-box{
+  box-sizing: border-box;
+}
+
+.r-font-size-sm-s {
+  font-size: $font-size-sm-s;
+}
+.r-font-size-sm {
+  font-size: $font-size-sm;
+}
+.r-font-size {
+  font-size: $font-size;
+}
+.r-font-size-x {
+  font-size: $font-size-x;
+}
+.r-font-size-lg {
+  font-size: $font-size-lg;
+}
+.r-font-size-lg-x {
+  font-size: $font-size-lg-x;
+}
+
+.r-border-top{
+  border-top: 1px solid $color-border;
+}
+.r-border-bottom{
+  border-bottom: 1px solid $color-border;
+}
+.r-border-left{
+  border-top: 1px solid $color-border;
+}
+.r-border-right{
+  border-bottom: 1px solid $color-border;
+}
+.r-border{
+  border-bottom: 1px solid $color-border;
+}
+
+.r-margin-top{
+  margin-top: 8px;
+}
+.r-margin-right{
+  margin-right: 8px;
+}
+.r-margin-bottom{
+  margin-bottom: 8px;
+}
+.r-margin-left{
+  margin-left: 8px;
+}
+.r-margin-lf{
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.r-margin-tb{
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.r-margin{
+  margin: 8px;
+}
+.r-margin-top-mini{
+  margin-top: 5px;
+}
+.r-margin-right-mini{
+  margin-right: 5px;
+}
+.r-margin-bottom-mini{
+  margin-bottom: 5px;
+}
+.r-margin-left-mini{
+  margin-left: 5px;
+}
+.r-margin-lf-mini{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.r-margin-tb-mini{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.r-margin-mini{
+  margin: 5px;
+}
+.r-margin-top-lg{
+  margin-top: 16px;
+}
+.r-margin-right-lg{
+  margin-right: 16px;
+}
+.r-margin-bottom-lg{
+  margin-bottom: 16px;
+}
+.r-margin-left-lg{
+  margin-left: 16px;
+}
+.r-margin-lf-lg{
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.r-margin-tb-lg{
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.r-margin-lg{
+  margin: 16px;
+}
+.r-no-margin{
+  margin: 0 !important;
+}
+
+.r-padding-top{
+  padding-top: 10px;
+}
+.r-padding-right{
+  padding-right: 10px;
+}
+.r-padding-bottom{
+  padding-bottom: 10px;
+}
+.r-padding-left{
+  padding-left: 10px;
+}
+.r-padding-lf{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.r-padding-tb{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.r-padding{
+  padding: 10px;
+}
+.r-padding-mini{
+  padding: 5px;
+}
+.r-padding-top-mini{
+  padding-top: 5px;
+}
+.r-padding-right-mini{
+  padding-right: 5px;
+}
+.r-padding-bottom-mini{
+  padding-bottom: 5px;
+}
+.r-padding-left-mini{
+  padding-left: 5px;
+}
+.r-padding-lf-mini{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.r-padding-tb-mini{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.r-padding-mini{
+  padding: 5px;
+}
+.r-padding-large{
+  padding: 20px;
+}
+.r-padding-top-large{
+  padding-top: 20px;
+}
+.r-padding-right-large{
+  padding-right: 20px;
+}
+.r-padding-bottom-large{
+  padding-bottom: 20px;
+}
+.r-padding-left-large{
+  padding-left: 20px;
+}
+.r-padding-lf-large{
+  padding-left: 20px;
+  padding-right: 5px;
+}
+.r-padding-tb-large{
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+.r-padding-large{
+  padding: 20px;
+}
+.r-no-padding{
+  padding: 0;
+}
+.r-line-height{
+  height: 30px;
+  line-height: 30px;
+}
+
+.r-width-100{
+  width: 100%;
+}
+// el-col内容为空时不展示，需要占位时，里面放一个元素来占位
+.r-empty-col{
+  width: 0;
+  height: 1px;
+}
+
+.r-text-aligin-left{
+  text-align: left;
+}
+.r-text-aligin-center{
+  text-align: center;
+}
+.r-text-aligin-right{
+  text-align: right;
+}
+
+.r-color-primary{
+  color: $color-primary;
+}
+.r-color-success{
+  color: $color-success;
+}
+.r-color-warning{
+  color: $color-warning;
+}
+.r-color-danger{
+  color: $color-danger;
+}
+.r-color-info{
+  color: $color-info;
+}
+
+// 表单选中tag list
+.r-form-selected-tag-list {
+  margin-top: 6px;
+  .el-tag{
+    margin-right: 5px;
+  }
+}
+
+.r-text-ellipsis{
+  .ellipsis();
+}
+.r-text-nowrap{
+  white-space: nowrap;
+}
+.r-text-wrap{
+  white-space: wrap;
+}
+
+.r-cursor-default{
+  cursor: default;
+}
+.r-cursor-move{
+  cursor: move;
+}
+.r-cursor-disabled{
+  cursor: not-allowed;
+}
+.r-cursor-pointer{
+  cursor: pointer;
+}
+
+.r-icon{
+  position: relative;
+}
+.r-icon-center{
+  display: inline-block;
+  .flex-center();
+}
+.r-icon-size_mini{
+  width: 16px;
+  height: 16px;
+}
+.r-icon-size_small{
+  width: 24px;
+  height: 24px;
+}
+.r-icon-size{
+  width: 30px;
+  height: 30px;
+}
+.r-icon-size_large{
+  width: 36px;
+  height: 36px;
+}

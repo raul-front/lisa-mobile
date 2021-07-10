@@ -1,0 +1,196 @@
+/*
+ * @Descripttion: 原子类样式
+ * @Author: pujianguo
+ * @Date: 2021-03-11 09:17:11
+ */
+@import './mixins.less';
+
+@important: !important;
+
+// 背景颜色
+// .r-bg-color{
+//   background-color: $uni-bg-color !important;
+// }
+// .r-bg-color-grey{
+//   background-color: $uni-bg-color-grey !important;
+// }
+// .r-bg-color-card{
+//   background-color: $uni-bg-color-card !important;
+// }
+// .r-bg-transparent{
+//   background-color: transparent !important;
+// }
+
+// 文本颜色
+// .r-text-primary{
+//   color: $uni-color-primary !important;
+// }
+// .r-text-success{
+//   color: $uni-color-success !important;
+// }
+// .r-text-warning{
+//   color: $uni-color-warning !important;
+// }
+// .r-text-error{
+//   color: $uni-color-error !important;
+// }
+// .r-text-grey{
+//   color: $uni-text-color-grey !important;
+// }
+// .r-text-placeholder{
+//   color: $uni-text-color-placeholder !important;
+// }
+// .r-text-disable{
+//   color: $uni-text-color-disable !important;
+// }
+// .r-text-title{
+// 	color: $uni-color-title !important;
+// }
+// .r-text-subtitle{
+// 	color: $uni-color-subtitle !important;
+// }
+// .r-text-paragraph{
+//   color: $uni-color-paragraph !important;
+// }
+
+// 文本隐藏行数
+.r-text-line-1{
+  .ellipsis();
+}
+.r-text-line-2{
+  .multi-line-ellipsis(2);
+}
+.r-text-line-3{
+  .multi-line-ellipsis(3);
+}
+.r-text-line-4{
+  .multi-line-ellipsis(4);
+}
+.r-text-line-5{
+  .multi-line-ellipsis(5);
+}
+
+.r-box-shadow{
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+// border
+$borderSize: (
+  -no: 0 $important,
+  '': 1rpx solid uni-border-color,
+);
+@each $key, $value in $borderSize {
+  .r-border#{$key}{
+    border: $value;
+  }
+  .r-border-top#{$key}{
+    border-top: $value;
+  }
+  .r-border-right#{$key}{
+    border-right: $value;
+  }
+  .r-border-bottom#{$key}{
+    border-bottom: $value;
+  }
+  .r-border-left#{$key}{
+    border-left: $value;
+  }
+}
+
+// margin
+$marginSize: (
+  -no: 0 $important,
+  -sm: 8px,
+  '': 16px,
+  -lg: 24px
+);
+@each $key, $value in $marginSize {
+  .r-margin#{$key}{
+    margin: $value;
+  }
+  .r-margin-top#{$key}{
+    margin-top: $value;
+  }
+  .r-margin-right#{$key}{
+    margin-right: $value;
+  }
+  .r-margin-bottom#{$key}{
+    margin-bottom: $value;
+  }
+  .r-margin-left#{$key}{
+    margin-left: $value;
+  }
+}
+
+// padding
+$paddingSize: (
+  -no: 0 $important,
+  -sm: 8px,
+  '': 16px,
+  -lg: 24px
+);
+@each $key, $value in $paddingSize {
+  .r-padding#{$key}{
+    padding: $value;
+  }
+  .r-padding-top#{$key}{
+    padding-top: $value;
+  }
+  .r-padding-right#{$key}{
+    padding-right: $value;
+  }
+  .r-padding-bottom#{$key}{
+    padding-bottom: $value;
+  }
+  .r-padding-left#{$key}{
+    padding-left: $value;
+  }
+}
+
+// position
+.r-position-relative{
+  position: relative;
+}
+
+// text
+.r-text-algin-center{
+  text-algin: center;
+}
+.r-text-font-bold{
+  text-weight: bold;
+}
+
+// 宽度
+.r-width-auto{
+  width: auto !important;
+}
+
+// flex
+.r-display-flex{
+  display: flex;
+}
+.r-display-flex-column{
+  display: flex;
+  flex-direction: column;
+}
+.r-flex-item{
+  width: 0;
+  flex: 1;
+}
+.r-flex-column-item{
+  height: 0;
+  flex: 1;
+}
+
+// overflow
+.r-overflow-hidden{
+  overflow: hidden;
+}
+.r-overflow-x-auto{
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.r-overflow-y-auto{
+  overflow-y: auto;
+  overflow-x: hidden;
+}

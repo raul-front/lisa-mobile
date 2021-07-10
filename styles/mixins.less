@@ -1,0 +1,72 @@
+@import 'styles/variables.less';
+
+/* flex-center */
+.flex-center(@direction: row) {
+  display: flex;
+  flex-direction: @direction;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 水平居中 */
+.lex-center-x() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 垂直居中 */
+.flex-center-y() {
+  display: flex;
+  align-items: center;
+}
+
+/* flex-between */
+.flex-between() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-around() {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* ellipsis */
+.ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* multi line ellipsis */
+.multi-line-ellipsis(@num: 2) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: @num;
+  -webkit-box-orient: vertical;
+}
+
+.circle(@width) {
+  width: @width;
+  height: @width;
+  border-radius: 50%;
+  .flex-center();
+}
+
+.arrows(@deg) {
+  .flex-center();
+  &:before{
+    content: ' ';
+    height: 7px;
+    width: 7px;
+    border-width: 2px 2px 0 0;
+    border-color: @primary-color;
+    border-style: solid;
+    transform: rotate(@deg);
+  }
+}
