@@ -19,7 +19,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="less">
 // 请保证父组件有定位
 .r-empty{
   position: absolute;
@@ -27,7 +27,7 @@ export default {
   top: 0;
   width: 100%;
   height: 100%;
-  @include flex-center(column);
+  .flex-center(column);
   padding: 20px;
   box-sizing: border-box;
   z-index: 1;
